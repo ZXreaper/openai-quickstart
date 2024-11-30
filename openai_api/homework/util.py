@@ -13,11 +13,12 @@ GPT_MODEL = "gpt-3.5-turbo"
 # 定义一个函数chat_completion_request，主要用于发送 聊天补全 请求到OpenAI服务器
 @retry(wait=wait_random_exponential(multiplier=1, max=40), stop=stop_after_attempt(3))
 def chat_completion_request(messages, functions=None, function_call=None, model=GPT_MODEL):
-
+    load_dotenv(dotenv_path="/Users/zhangxu/D/openai-quickstart/openai_api/homework/config/config.env")
+    bearer = os.getenv("LLM_BEARER")
     # 设定请求的header信息，包括 API_KEY
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer " + "sk-3TVqzS5kKYHVI0Ox9280B6314fA2441597E18c5072840dD5",
+        "Authorization": "Bearer " + bearer,
     }
 
     # 设定请求的JSON数据，包括GPT 模型名和要进行补全的消息
