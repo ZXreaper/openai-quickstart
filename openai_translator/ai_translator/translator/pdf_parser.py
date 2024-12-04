@@ -1,8 +1,8 @@
 import pdfplumber
 from typing import Optional
-from book import Book, Page, Content, ContentType, TableContent
-from translator.exceptions import PageOutOfRangeException
-from utils import LOG
+from openai_translator.ai_translator.book import Book, Page, Content, ContentType, TableContent
+from openai_translator.ai_translator.translator.exceptions import PageOutOfRangeException
+from openai_translator.ai_translator.utils import LOG
 
 
 class PDFParser:

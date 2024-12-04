@@ -7,8 +7,8 @@ from reportlab.platypus import (
     SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak
 )
 
-from book import Book, ContentType
-from utils import LOG
+from openai_translator.ai_translator.book import Book, ContentType
+from openai_translator.ai_translator.utils import LOG
 
 class Writer:
     def __init__(self):

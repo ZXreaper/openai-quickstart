@@ -5,7 +5,7 @@ import os
 import openai
 
 from model import Model
-from utils import LOG
+from openai_translator.ai_translator.utils import LOG
 from openai import OpenAI
 
 class OpenAIModel(Model):
